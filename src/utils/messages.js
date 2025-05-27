@@ -11,7 +11,7 @@ exports.waitMessage = "Carregando dados...";
 exports.menuMessage = () => {
   const date = new Date();
 
-    return `╭  ┄ 𝅄 ۪꒰ ⡞᪲=͟͟͞𝘽𝙄𝙀𝙉𝙑𝙀𝙉𝙄𝘿𝙊  ≼᳞ׄ꒱ ۟ 𝅄 ┄
+    return `╭  ┄ 𝅄 ۪꒰ ⡞᪲=͟͟͞𝘽𝙄𝙀𝙉𝙑𝙀𝙉𝙄𝘿𝙊 ≼᳞ׄ ꒱ ۟ 𝅄 ┄
 ┊  
 ┊ • ${BOT_NAME}
 ┊ • Fecha: ${date.toLocaleDateString("pt-br")}
@@ -27,22 +27,18 @@ exports.menuMessage = () => {
 ┊ • ${PREFIX}off
 ┊ • ${PREFIX}on
 ┊
-╰⸼ ┄  ─  ꒰  ׅ୭ *7* ୧ ׅ ꒱  ┄  ─ ┄ ⸼
+╰⸼ ┄  ─  ꒰  ׅ୭ ☕ ୧ ׅ ꒱  ┄  ─ ┄ ⸼
 
 ╭  ┄ 𝅄 ۪꒰ ⡞᪲=͟͟͞𝘼𝘿𝙈𝙄𝙉𝙎≼᳞ׄ ꒱ ۟ 𝅄 ┄
 ┊
 ┊ • ${PREFIX}abrir
 ┊ • ${PREFIX}anti-link (1/0)
 ┊ • ${PREFIX}auto-responder (1/0)
-┊ • ${PREFIX}ban
-┊ • ${PREFIX}salida (1/0)
 ┊ • ${PREFIX}cerrar
 ┊ • ${PREFIX}etiquetar
 ┊ • ${PREFIX}etiquetar1x1 
-┊ • ${PREFIX}rebaixar
-┊ • ${PREFIX}bienvenido (1/0)
 ┊
-╰⸼ ┄  ─  ꒰  ׅ୭ *7* ୧ ׅ ꒱  ┄  ─ ┄ ⸼`;
+╰⸼ ┄  ─  ꒰  ׅ୭ 🔥 ୧ ׅ ꒱  ┄  ─ ┄ ⸼`;
 };
 
 /**
