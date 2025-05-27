@@ -1,5 +1,5 @@
 /**
- * Mensagens do bot
+ * Menu del bot
  *
  * @author Dev Gui
  */
@@ -11,40 +11,51 @@ exports.waitMessage = "Carregando dados...";
 exports.menuMessage = () => {
   const date = new Date();
 
-  return `╭━━⪩ BEM VINDO! ⪨━━
-▢
-▢ • ${BOT_NAME}
-▢ • Data: ${date.toLocaleDateString("pt-br")}
-▢ • Hora: ${date.toLocaleTimeString("pt-br")}
-▢ • Prefixo: ${PREFIX}
-▢ • Versão: ${packageInfo.version}
-▢
-╰━━─「🪐」─━━
+    return `╭  ┄ 𝅄 ۪꒰ ⡞᪲=͟͟͞𝘽𝙄𝙀𝙉𝙑𝙀𝙉𝙄𝘿𝙊  ≼᳞ׄ꒱ ۟ 𝅄 ┄
+┊  
+┊ • ${BOT_NAME}
+┊ • Fecha: ${date.toLocaleDateString("pt-br")}
+┊ • Hora: ${date.toLocaleTimeString("pt-br")}
+┊ • Prefijo: ${PREFIX}
+┊ • Versión: ${packageInfo.version}
+┊
+╰⸼ ┄ ┄ ┄ ─  ꒰  ׅ୭ 🦕 ୧ ׅ ꒱  ┄ ┄ ─ ┄ ⸼
 
-╭━━⪩ DONO ⪨━━
-▢
-▢ • ${PREFIX}get-id
-▢ • ${PREFIX}off
-▢ • ${PREFIX}on
-▢
-╰━━─「🌌」─━━
+╭  ┄ 𝅄 ۪꒰ ⡞᪲=͟͟͞𝘿𝙐𝙀𝙉̃𝙊≼᳞ׄ ꒱ ۟ 𝅄 ┄
+┊
+┊ • ${PREFIX}get-id
+┊ • ${PREFIX}off
+┊ • ${PREFIX}on
+┊
+╰⸼ ┄  ─  ꒰  ׅ୭ *7* ୧ ׅ ꒱  ┄  ─ ┄ ⸼
 
-╭━━⪩ ADMINS ⪨━━
-▢
-▢ • ${PREFIX}abrir
-▢ • ${PREFIX}anti-link (1/0)
-▢ • ${PREFIX}auto-responder (1/0)
+╭  ┄ 𝅄 ۪꒰ ⡞᪲=͟͟͞𝘼𝘿𝙈𝙄𝙉𝙎≼᳞ׄ ꒱ ۟ 𝅄 ┄
+┊
+┊ • ${PREFIX}abrir
+┊ • ${PREFIX}anti-link (1/0)
+┊ • ${PREFIX}auto-responder (1/0)
+┊ • ${PREFIX}ban
+┊ • ${PREFIX}salida (1/0)
+┊ • ${PREFIX}cerrar
+┊ • ${PREFIX}etiquetar
+┊ • ${PREFIX}etiquetar1x1 
+┊ • ${PREFIX}rebaixar
+┊ • ${PREFIX}bienvenido (1/0)
+┊
+╰⸼ ┄  ─  ꒰  ׅ୭ *7* ୧ ׅ ꒱  ┄  ─ ┄ ⸼`;
+};
+
+/**
+Comandos admis quitandos:
 ▢ • ${PREFIX}ban
 ▢ • ${PREFIX}exit (1/0)
-▢ • ${PREFIX}fechar
-▢ • ${PREFIX}hidetag
-▢ • ${PREFIX}limpar
 ▢ • ${PREFIX}promover
-▢ • ${PREFIX}rebaixar
 ▢ • ${PREFIX}revelar
-▢ • ${PREFIX}welcome (1/0)
-▢
-╰━━─「⭐」─━━
+▢ • ${PREFIX}rebaixar
+▢ • ${PREFIX}anti-link (1/0)
+▢ • ${PREFIX}salida (1/0)
+▢ • ${PREFIX}bienvenido (1/0)
+
 
 ╭━━⪩ PRINCIPAL ⪨━━
 ▢
@@ -99,5 +110,7 @@ exports.menuMessage = () => {
 ▢ • ${PREFIX}inverter
 ▢ • ${PREFIX}rip
 ▢
-╰━━─「❇」─━━`;
-};
+╰━━─「❇」─━━
+*/
+
+
