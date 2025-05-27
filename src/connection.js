@@ -82,15 +82,17 @@ async function connect(groupCache) {
   });
 
   if (!socket.authState.creds.registered) {
-    warningLog("Credenciais ainda não configuradas!");
+    warningLog("¡Credenciales aún no configuradas!");
 
-    infoLog('Informe o número de telefone do bot (exemplo: "5511920202020"):');
+    infoLog('Ingresa el número de teléfono del bot (ejemplo: "573245451694"):'
+  );
 
-    const phoneNumber = await question("Informe o número de telefone do bot: ");
+
+    const phoneNumber = await question(" ");
 
     if (!phoneNumber) {
       errorLog(
-        'Número de telefone inválido! Tente novamente com o comando "npm start".'
+        '¡Número de teléfono inválido! Intenta nuevamente con el comando "npm start".'
       );
 
       process.exit(1);
@@ -98,7 +100,7 @@ async function connect(groupCache) {
 
     const code = await socket.requestPairingCode(onlyNumbers(phoneNumber));
 
-    sayLog(`Código de pareamento: ${code}`);
+    sayLog(`Código de emparejamiento: ${code}`);
   }
 
   socket.ev.on("connection.update", async (update) => {
@@ -112,10 +114,10 @@ async function connect(groupCache) {
       } else {
         switch (statusCode) {
           case DisconnectReason.badSession:
-            warningLog("Sessão inválida!");
+            warningLog("¡Sesión inválida!");
             break;
           case DisconnectReason.connectionClosed:
-            warningLog("Conexão fechada!");
+            warningLog("¡Conexión cerrada!");
             break;
           case DisconnectReason.connectionLost:
             warningLog("Conexão perdida!");
