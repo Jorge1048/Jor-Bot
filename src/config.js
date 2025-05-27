@@ -7,7 +7,7 @@ exports.PREFIX = "/";
 exports.BOT_EMOJI = "🤖";
 
 // Nombre del bot (cámbialo si lo prefieres).
-exports.BOT_NAME = "Satohaki";
+exports.BOT_NAME = "Satohaki-bot";
 
 
 exports.BOT_NUMBER = "558112345678";
