@@ -1,70 +1,70 @@
 /*
- * Se você clicou aqui é porque provavelmente já usou um bot de "case" e com um "index.js" de 20 mil linhas...
- * Eu sei, eu entendo você!
- * O que é melhor? Dar erro no seu play, você ir no arquivo "play.js" e corrigir
- * ou ir na linha 71023 do "index.js" e corrigir?
+ * Si estás leyendo esto, probablemente ya usaste un bot lleno de "case" y con un "index.js" de 20 mil líneas...
+ * Lo sé, ¡te entiendo!
+ * ¿Qué es mejor? ¿Que dé error tu play, ir al archivo "play.js" y corregirlo,
+ * o ir a la línea 71023 del "index.js" y arreglarlo?
  *
- * Imagina se vc cola sua "case" errado e esquece de fechar
- * ou abrir um parênteses, uma chave...
- * Você põe o bot pra rodar, dá vários erros e você não sabe resolver...
- * Adivinha o que você faz?
- * Você volta "a index.js" pra que estava antes, não é verdade?
+ * Imagina que pegas mal tu "case" y olvidas cerrar
+ * o abrir un paréntesis, una llave...
+ * Pones el bot a funcionar, da varios errores y no sabes cómo solucionarlo...
+ * ¿Adivina qué haces?
+ * Vuelves el "index.js" a como estaba antes, ¿verdad?
  *
- * É isso que não queremos! Queremos um código limpo, legível e de fácil manutenção!
- * Nós criamos código para humanos, não para máquinas, então, quanto mais simples, melhor!
+ * ¡Eso es justo lo que no queremos! ¡Queremos un código limpio, legible y fácil de mantener!
+ * ¡Nosotros creamos código para humanos, no para máquinas, así que cuanto más simple, mejor!
  *
- * A partir de agora, vamos trocar a palavra "case" por "comando", ok? Vamos lá!
+ * A partir de ahora, vamos a cambiar la palabra "case" por "comando", ¿ok? ¡Vamos allá!
  *
- * ---------------- 🤖 ONDE ESTÃO OS COMANDOS? 🤖 ----------------
+ * ---------------- 🤖 ¿DÓNDE ESTÁN LOS COMANDOS? 🤖 ----------------
  *
- * Você encontra os comandos dentro da pasta "src/commands"
- * Não entendeu? Vamos lá:
+ * Encontrarás los comandos dentro de la carpeta "src/commands"
+ * ¿No entendiste? Vamos paso a paso:
  *
- * Abra a pasta "src"
- * Depois, abra a pasta "commands"
+ * Abre la carpeta "src"
+ * Luego, abre la carpeta "commands"
  *
- * Perceba que dentro dela tem 3 pastas:
+ * Verás que dentro hay 3 carpetas:
  *
  * - 📁 admin
  * - 📁 member
  * - 📁 owner
  *
- * Dentro da pasta admin tem comandos administrativos.
- * Dentro da pasta member tem comandos para membros.
- * Dentro da pasta owner tem comandos que são acessados somente pelo dono do bot/grupo!
+ * Dentro de la carpeta admin hay comandos administrativos.
+ * Dentro de la carpeta member hay comandos para miembros.
+ * Dentro de la carpeta owner hay comandos que solo pueden ser usados por el dueño del bot/grupo.
  *
- * Simples, não é mesmo? Ah, detalhe, não precisa colocar um "if" para saber se o comando é de admin ou de dono.
- * O bot já faz isso para você! Basta colocar o comando na pasta correspondente!
+ * Sencillo, ¿verdad? Ah, un detalle: no necesitas poner un "if" para saber si el comando es de admin o del dueño.
+ * ¡El bot ya lo hace por ti! Solo pon el comando en la carpeta correspondiente.
  *
- * ---------------- 🤖 ONDE MODIFICO O MENU? 🤖 ----------------
+ * ---------------- 🤖 ¿DÓNDE MODIFICO EL MENÚ? 🤖 ----------------
  *
- * Abra a pasta "src"
- * Vá no arquivo "messages.js" e edite o menu!
- * Só lembrando, faça tudo dentro das crases (`), pois é um template string!
+ * Abre la carpeta "src"
+ * Ve al archivo "messages.js" y edita el menú.
+ * Solo recuerda, ¡haz todo dentro de las comillas invertidas (`), porque es un template string!
  *
- * Não entendeu?
- * Veja:
+ * ¿No entendiste?
+ * Mira:
  *
- * `Olá tudo bem?` - Isto está CORRETO ✅
+ * `Hola, ¿todo bien?` - ESTO ESTÁ CORRECTO ✅
  *
- * Olá `tudo bem?` - Isto está ERRADO (veja que o "Olá" está fora das crases) ❌
+ * Hola `¿todo bien?` - ESTO ESTÁ INCORRECTO (fíjate que el "Hola" está fuera de las comillas) ❌
  *
- * ---------------- 🤖 COMO TROCO A FOTO DO BOT? 🤖 ----------------
+ * ---------------- 🤖 ¿CÓMO CAMBIO LA FOTO DEL BOT? 🤖 ----------------
  *
- * Abra a pasta "assets"
- * Depois, abra a pasta "images"
- * Substitua a imagem "takeshi-bot.png" por outra de sua preferência!
- * Só não esqueça de manter o nome "takeshi-bot.png"
+ * Abre la carpeta "assets"
+ * Luego abre la carpeta "images"
+ * Sustituye la imagen "takeshi-bot.png" por otra de tu preferencia.
+ * Solo no olvides mantener el nombre "takeshi-bot.png"
  *
  * ---------------- 🚀 IMPORTANTE 🚀 ----------------
  *
- * Leia o tutorial completo em: https://github.com/guiireal/takeshi-bot?tab=readme-ov-file#instala%C3%A7%C3%A3o-no-termux-
+ * Lee el tutorial completo en: https://github.com/guiireal/takeshi-bot?tab=readme-ov-file#instala%C3%A7%C3%A3o-no-termux-
  *
- * Não pule etapas! Leia-o completo, pois ele é muito importante para você entender como o bot funciona!
+ * ¡No te saltes pasos! Léelo completo, porque es muy importante para que entiendas cómo funciona el bot.
  *
  * By: Dev Gui
  *
- * Não modifique nada abaixo, a não ser que saiba o que está fazendo!
+ * ¡No modifiques nada de aquí hacia abajo, a menos que sepas lo que estás haciendo!
  */
 const NodeCache = require("node-cache");
 const { connect } = require("./connection");
