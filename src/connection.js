@@ -1,20 +1,20 @@
 /**
  * Script de
- * inicialização do bot.
+ * inicialización del bot.
  *
- * Este script é
- * responsável por
- * iniciar a conexão
- * com o WhatsApp.
+ * Este script es
+ * responsable de
+ * iniciar la conexión
+ * con WhatsApp.
  *
- * Não é recomendado alterar
- * este arquivo,
- * a menos que você saiba
- * o que está fazendo.
+ * No se recomienda modificar
+ * este archivo,
+ * a menos que sepas
+ * lo que estás haciendo.
+ *
  *
  * @author Dev Gui
  */
-
 const path = require("path");
 const { question, onlyNumbers } = require("./utils");
 const {
@@ -120,22 +120,22 @@ async function connect(groupCache) {
             warningLog("¡Conexión cerrada!");
             break;
           case DisconnectReason.connectionLost:
-            warningLog("Conexão perdida!");
+            warningLog("Conexión perdida!");
             break;
           case DisconnectReason.connectionReplaced:
-            warningLog("Conexão substituída!");
+            warningLog("Conexión sustituida!");
             break;
           case DisconnectReason.multideviceMismatch:
-            warningLog("Dispositivo incompatível!");
+            warningLog("Dispositivo incompatible!");
             break;
           case DisconnectReason.forbidden:
-            warningLog("Conexão proibida!");
+            warningLog("Conexión prohibida!");
             break;
           case DisconnectReason.restartRequired:
             infoLog('Me reinicie por favor! Digite "npm start".');
             break;
           case DisconnectReason.unavailableService:
-            warningLog("Serviço indisponível!");
+            warningLog("Servicio no disponible!");
             break;
         }
 
@@ -143,9 +143,9 @@ async function connect(groupCache) {
         load(newSocket, groupCache);
       }
     } else if (connection === "open") {
-      successLog("Fui conectado com sucesso!");
+      successLog("Fuí conectado con éxito!");
     } else {
-      infoLog("Atualizando conexão...");
+      infoLog("Actualizando conexión...");
     }
   });
 
