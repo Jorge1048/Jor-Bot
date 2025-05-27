@@ -1,7 +1,7 @@
 {
   "name": "satohaki-bot",
   "version": "4.0.0",
-  "description": "Un bot de WhatsApp multifunciones.",
+  "description": "Um bot de WhatsApp multifunções.",
   "main": "./src/index.js",
   "scripts": {
     "start": "node --watch ./src/index.js",
