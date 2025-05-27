@@ -1,8 +1,8 @@
 /**
- * Este script é responsável
- * por carregar os eventos
- * que serão escutados pelo
- * socket do WhatsApp.
+ * Este script es responsable
+ * de cargar los eventos
+ * que serán escuchados por
+ * el socket de WhatsApp.
  *
  * @author Dev Gui
  */
