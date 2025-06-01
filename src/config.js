@@ -1,57 +1,57 @@
 const path = require("path");
+const path = require("path");
 
-// Prefixo dos comandos.
+// Prefijo de comando (Usa otro si lo prefieres)
 exports.PREFIX = "/";
 
-// Emoji do bot (mude se preferir).
+// Emoji/distintivo del bot (Puedes usar otro y puedes cambiarlo por palabras).
 exports.BOT_EMOJI = "👾";
 
-// Nome do bot (mude se preferir).
+// Nombre del bot
 exports.BOT_NAME = "Satohaki bot";
 
-// Número do bot. Coloque o número do bot
-// (apenas números, exatamente como está no WhatsApp).
-// Se o seu DDD não for de SP ou do Rio, não coloque o 9 antes do número.
+// Número de bot. Introduzca el número del bot
+// (solo números, tal como está en WhatsApp).
 exports.BOT_NUMBER = "573019580756";
 
 //clave para chatgpt 👇🏻
 exports.OPENROUTER_API_KEY = "Pon_tu_clave_aquí";
 
-// Número do dono do bot. Coloque o número do dono do bot
-// (apenas números, exatamente como está no WhatsApp).
-// Se o seu DDD não for de SP ou do Rio, não coloque o 9 antes do número.
-exports.OWNER_NUMBER = "5521950502020";
+// Número de propietario del bot. Introduzca el número del propietario del bot
+// (solo números, tal como está en WhatsApp).
+exports.OWNER_NUMBER = "573019580756";
 
-// Diretório dos comandos
+// Diretorio de comandos
 exports.COMMANDS_DIR = path.join(__dirname, "commands");
 
-// Diretório de arquivos de mídia.
+// Directorio de archivos multimedia.
 exports.DATABASE_DIR = path.resolve(__dirname, "..", "database");
 
-// Diretório de arquivos de mídia.
+// Directorio de archivos multimedia.
 exports.ASSETS_DIR = path.resolve(__dirname, "..", "assets");
 
-// Diretório de arquivos temporários.
+// Directorio de archivos temporales.
 exports.TEMP_DIR = path.resolve(__dirname, "..", "assets", "temp");
 
-// Timeout em milissegundos por evento (evita banimento).
+// Tiempo de espera en milisegundos por evento (evita la prohibición).
 exports.TIMEOUT_IN_MILLISECONDS_BY_EVENT = 700;
 
 // Plataforma de API's
-exports.SPIDER_API_BASE_URL = "tu clave API aquí";
+exports.SPIDER_API_BASE_URL = "https://api.spiderx.com.br/api";
 
-// Obtenha seu token, criando uma conta em: https://api.spiderx.com.br.
-exports.SPIDER_API_TOKEN = "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";
+// Obtenga su token creando una cuenta en: https://api.spiderx.com.br.
 
-// Caso queira responder apenas um grupo específico, coloque o ID dele aqui (ex: 120363023799506419@g.us).
-// Para saber o ID do grupo, use o comando <prefixo>getid
-// Troque o <prefixo> pelo prefixo do bot (ex: /getid).
+exports.SPIDER_API_TOKEN = "No_dijitar_nada_aquíi";
+
+// Si desea responder solo a un grupo específico, coloque su ID aquí (ej: 120363023799506419@g.us).
+// Para averiguar el ID del grupo, utilice el comando <prefix>get-id
+// Reemplace <prefix> con el prefijo del bot (por ejemplo, /get-id).
 exports.ONLY_GROUP_ID = "";
 
-// Diretório base do projeto.
+// Directorio base del proyecto.
 exports.BASE_DIR = path.resolve(__dirname);
 
-// Caso queira usar proxy.
+// Si desea utilizar proxy.
 exports.PROXY_PROTOCOL = "http";
 exports.PROXY_HOST = "ip";
 exports.PROXY_PORT = "porta";
