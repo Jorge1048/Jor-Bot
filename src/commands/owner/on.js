@@ -13,6 +13,6 @@ module.exports = {
   handle: async ({ sendSuccessReply, remoteJid }) => {
     activateGroup(remoteJid);
 
-    await sendSuccessReply("Bot ativado no grupo!");
+    await sendSuccessReply("Bot ativado en el grupo!");
   },
 };
