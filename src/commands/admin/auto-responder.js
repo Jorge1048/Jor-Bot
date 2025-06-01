@@ -8,6 +8,7 @@ const {
 module.exports = {
   name: "auto-responder",
   description: "Ativo/desativo o recurso de auto-responder no grupo.",
+  type: "admin",
   commands: ["auto-responder"],
   usage: `${PREFIX}auto-responder (1/0)`,
   /**
@@ -17,7 +18,7 @@ module.exports = {
   handle: async ({ args, sendReply, sendSuccessReact, remoteJid }) => {
     if (!args.length) {
       throw new InvalidParameterError(
-        "Você precisa digitar 1 ou 0 (ligar ou desligar)!"
+        "Necesitas escribir 1 o 0 (encender o apagar)!"
       );
     }
 
@@ -26,7 +27,7 @@ module.exports = {
 
     if (!autoResponder && !notAutoResponder) {
       throw new InvalidParameterError(
-        "Você precisa digitar 1 ou 0 (ligar ou desligar)!"
+        "Necesitas escribir 1 o 0 (encender o apagar)!"
       );
     }
 
@@ -40,6 +41,6 @@ module.exports = {
 
     const context = autoResponder ? "ativado" : "desativado";
 
-    await sendReply(`Recurso de auto-responder ${context} com sucesso!`);
+    await sendReply(`Auto-responder ${context} con éxito!`);
   },
 };
