@@ -3,7 +3,8 @@ const { PREFIX } = require(`${BASE_DIR}/config`);
 module.exports = {
   name: "hide-tag",
   description: "Este comando marcará todos do grupo",
-  commands: ["hide-tag", "to-tag"],
+  type: "admin",
+  commands: ["hide-tag", "etiquetar"],
   usage: `${PREFIX}hidetag motivo`,
   /**
    * @param {CommandHandleProps} props
@@ -16,6 +17,6 @@ module.exports = {
 
     await sendReact("📢");
 
-    await sendText(`📢 Marcando todos!\n\n${fullArgs}`, mentions);
+    await sendText(`📢 Marcando a todos!\n\n${fullArgs}`, mentions);
   },
 };
