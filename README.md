@@ -38,7 +38,7 @@ git clone https://github.com/Jorge1048/Satohaki-bot.git
 5 - Entra en la carpeta que se clonó.
 
 ```sh
-cd takeshi-bot
+cd satohaki-bot
 ```
 
 6 - Habilita permisos de lectura y escritura (haz este paso solo una vez).
