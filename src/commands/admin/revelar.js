@@ -27,7 +27,7 @@ module.exports = {
   }) => {
     if (!isImage && !isVideo) {
       throw new InvalidParameterError(
-        "Você precisa marcar uma imagem/vídeo ou responder a uma imagem/vídeo para revelá-la"
+        "Tienes que responder una imagen para revelar"
       );
     }
 
@@ -36,7 +36,7 @@ module.exports = {
     const mediaCaption =
       webMessage.message?.extendedTextMessage?.contextInfo?.quotedMessage?.[
         isImage ? "imageMessage" : "videoMessage"
-      ]?.caption || `Aqui está sua ${isImage ? "imagem" : "vídeo"} revelada!`;
+      ]?.caption || `Aqui esta su ${isImage ? "imagen" : "video"} revelad@!`;
 
     const outputPath = path.resolve(
       TEMP_DIR,
@@ -83,14 +83,14 @@ module.exports = {
       }
     } catch (error) {
       console.error("Erro geral:", error);
-      throw new Error("Ocorreu um erro ao processar a mídia. Tente novamente.");
+      throw new Error("Se produjo un error al procesar el medio. Intentar otra vez.");
     } finally {
       const cleanFile = (filePath) => {
         if (filePath && fs.existsSync(filePath)) {
           try {
             fs.unlinkSync(filePath);
           } catch (cleanError) {
-            console.error("Erro ao limpar arquivo:", cleanError);
+            console.error("Error al limpiar el archivo:", cleanError);
           }
         }
       };
