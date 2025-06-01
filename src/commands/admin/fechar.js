@@ -2,17 +2,17 @@ const { PREFIX } = require(`${BASE_DIR}/config`);
 const { errorLog } = require(`${BASE_DIR}/utils/logger`);
 
 module.exports = {
-  name: "fechar",
+  name: "cerrar",
   description: "Fecha o grupo.",
+  type: "admin",
   commands: [
-    "fechar",
-    "fecha",
+    "cerrar", "stop",
     "fechar-grupo",
-    "fecha-grupo",
+    "stop",
     "close",
-    "close-group",
+    "Stop",
   ],
-  usage: `${PREFIX}fechar`,
+  usage: `${PREFIX}cerrar`,
   /**
    * @param {CommandHandleProps} props
    * @returns {Promise<void>}
@@ -20,13 +20,13 @@ module.exports = {
   handle: async ({ socket, remoteJid, sendSuccessReply, sendErrorReply }) => {
     try {
       await socket.groupSettingUpdate(remoteJid, "announcement");
-      await sendSuccessReply("Grupo fechado com sucesso!");
+      // await sendSuccessReply("Grupo cerrado!");
     } catch (error) {
       await sendErrorReply(
-        "Para fechar o grupo, eu preciso ser administrador dele!"
+        "Solo los administradores pueden cerrar el grupo!"
       );
       errorLog(
-        `Ocorreu um erro ao fechar o grupo! Causa: ${JSON.stringify(
+        `Ocurrió un error al cerrar el grupo! Causa: ${JSON.stringify(
           error,
           null,
           2
