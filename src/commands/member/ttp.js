@@ -8,11 +8,11 @@ module.exports = {
   description: "Faz figurinhas de texto.",
   commands: ["ttp"],
   usage: `${PREFIX}ttp teste`,
-   /**
+  
    * @param {CommandHandleProps} props
    * @returns {Promise<void>}
-   */
-  /**
+  
+
   handle: async ({
     sendWaitReact,
     args,
