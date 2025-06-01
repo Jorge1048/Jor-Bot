@@ -1,3 +1,4 @@
+/**
 const { PREFIX, TEMP_DIR } = require(`${BASE_DIR}/config`);
 const fs = require("fs");
 const path = require("path");
@@ -14,6 +15,7 @@ module.exports = {
    * @param {CommandHandleProps} props
    * @returns {Promise<void>}
    */
+/**
   handle: async ({
     isSticker,
     downloadSticker,
@@ -46,3 +48,5 @@ module.exports = {
     });
   },
 };
+
+*/
