@@ -1,20 +1,20 @@
-/**
+/** ✓
  * Script de
- * inicialización del bot.
+ * inicialização do bot.
  *
- * Este script es
- * responsable de
- * iniciar la conexión
- * con WhatsApp.
+ * Este script é
+ * responsável por
+ * iniciar a conexão
+ * com o WhatsApp.
  *
- * No se recomienda modificar
- * este archivo,
- * a menos que sepas
- * lo que estás haciendo.
- *
+ * Não é recomendado alterar
+ * este arquivo,
+ * a menos que você saiba
+ * o que está fazendo.
  *
  * @author Dev Gui
  */
+
 const path = require("path");
 const { question, onlyNumbers } = require("./utils");
 const {
@@ -82,17 +82,15 @@ async function connect(groupCache) {
   });
 
   if (!socket.authState.creds.registered) {
-    warningLog("¡Credenciales aún no configuradas!");
+    warningLog("Credenciales aún no configuradas!");
 
-    infoLog('Ingresa el número de teléfono del bot (ejemplo: "573245451694"):'
-  );
+    infoLog('Ingresa el número de teléfono del bot (ejemplo: "573245451694"):');
 
-
-    const phoneNumber = await question(" ");
+    const phoneNumber = await question("Ingresa el número de teléfono del bot: ");
 
     if (!phoneNumber) {
       errorLog(
-        '¡Número de teléfono inválido! Intenta nuevamente con el comando "npm start".'
+        '¡Número de teléfono inválido! Intenta de nuevo con el comando "npm start".'
       );
 
       process.exit(1);
@@ -114,10 +112,10 @@ async function connect(groupCache) {
       } else {
         switch (statusCode) {
           case DisconnectReason.badSession:
-            warningLog("¡Sesión inválida!");
+            warningLog("Sesión inválida!");
             break;
           case DisconnectReason.connectionClosed:
-            warningLog("¡Conexión cerrada!");
+            warningLog("Conexión cerrada!");
             break;
           case DisconnectReason.connectionLost:
             warningLog("Conexión perdida!");
@@ -135,7 +133,7 @@ async function connect(groupCache) {
             infoLog('Me reinicie por favor! Digite "npm start".');
             break;
           case DisconnectReason.unavailableService:
-            warningLog("Servicio no disponible!");
+            warningLog("Serviço indisponível!");
             break;
         }
 
@@ -143,7 +141,7 @@ async function connect(groupCache) {
         load(newSocket, groupCache);
       }
     } else if (connection === "open") {
-      successLog("Fuí conectado con éxito!");
+      successLog("Fuí conectando con éxito!");
     } else {
       infoLog("Actualizando conexión...");
     }
