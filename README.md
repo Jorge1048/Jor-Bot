@@ -79,3 +79,27 @@ En caso de que desvincules el bot de WhatsApp presiona `CTRL + c` y ejecuta:
 ```sh
 rm -rf ./assets/auth/baileys && npm start
 ```
+
+### Instructiones para activar la IA:
+
+Ve a este enlace:
+🔗 https://openrouter.ai/keys
+
+2. Si no tienes cuenta, regístrate (puedes usar tu cuenta de Google, Discord, etc.).
+
+3. Haz clic en "Create Key" (Crear Clave).
+
+4. En el campo "Name your key" puedes poner cualquier nombre (por ejemplo: SatohakiBot).
+
+5. En el campo de abajo, donde dice "Monthly Usage Limit", escribe:
+100 (esto representa el límite mensual de tokens o usos, puedes dejarlo en 100 o más si deseas).
+
+6. Haz clic en "Create Key".
+
+7. Copia tu clave y pégala en el archivo de configuración de tu bot:
+`exports.OPENROUTER_API_KEY = "Pon_clave_aquí";`
+
+No sabes donde encontrar la configuración? 
+
+Instala MT Manager desde la play store, entra al app y busca la carpeta `satohaki-bot` → `src` → `config.js`
+
