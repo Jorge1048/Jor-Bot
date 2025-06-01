@@ -19,7 +19,7 @@ module.exports = {
     }
 
     try {
-    await sendReact("📢"); // ✅ Corrección aquí
+    await sendReact("📢"); 
       const metadata = await socket.groupMetadata(remoteJid);
       const participantes = metadata?.participants || [];
 
