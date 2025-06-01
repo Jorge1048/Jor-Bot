@@ -8,7 +8,7 @@ const { getRandomName } = require(`${BASE_DIR}/utils`);
 module.exports = {
   name: "revelar",
   description: "Revela uma imagem ou vídeo com visualização única",
-  commands: ["revelar", "rv", "reveal"],
+  commands: ["revelarrrr", "rvrrr", "revealllll"],
   usage: `${DEFAULT_PREFIX}revelar (marque a imagem/vídeo) ou ${DEFAULT_PREFIX}revelar (responda a imagem/vídeo).`,
   /**
    * @param {CommandHandleProps} props
