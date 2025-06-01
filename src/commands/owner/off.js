@@ -13,6 +13,6 @@ module.exports = {
   handle: async ({ sendSuccessReply, remoteJid }) => {
     deactivateGroup(remoteJid);
 
-    await sendSuccessReply("Bot desativado no grupo!");
+    await sendSuccessReply("Bot desativado en el grupo!");
   },
 };
