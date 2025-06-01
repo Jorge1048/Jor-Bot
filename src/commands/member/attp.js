@@ -1,3 +1,4 @@
+/**
 const { PREFIX } = require(`${BASE_DIR}/config`);
 const { attp } = require(`${BASE_DIR}/services/spider-x-api`);
 const { InvalidParameterError } = require(`${BASE_DIR}/errors`);
@@ -7,10 +8,10 @@ module.exports = {
   description: "Faz figurinhas animadas de texto.",
   commands: ["attp"],
   usage: `${PREFIX}attp teste`,
-  /**
+  
    * @param {CommandHandleProps} props
    * @returns {Promise<void>}
-   */
+  
   handle: async ({
     sendWaitReact,
     args,
@@ -32,3 +33,4 @@ module.exports = {
     await sendStickerFromURL(url);
   },
 };
+*/
