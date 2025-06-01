@@ -8,6 +8,7 @@ const {
 module.exports = {
   name: "anti-link",
   description: "Ativo/desativo o recurso de anti-link no grupo.",
+  type: "admin",
   commands: ["anti-link"],
   usage: `${PREFIX}anti-link (1/0)`,
   /**
@@ -17,7 +18,7 @@ module.exports = {
   handle: async ({ args, sendReply, sendSuccessReact, remoteJid }) => {
     if (!args.length) {
       throw new InvalidParameterError(
-        "Você precisa digitar 1 ou 0 (ligar ou desligar)!"
+        "Necesita digitar 1 o 0 (activar o desactivar)!"
       );
     }
 
@@ -26,7 +27,7 @@ module.exports = {
 
     if (!antiLinkOn && !antiLinkOff) {
       throw new InvalidParameterError(
-        "Você precisa digitar 1 ou 0 (ligar ou desligar)!"
+        "Necesita digitar 1 o 0 (activar o desactivar!)"
       );
     }
 
@@ -40,6 +41,6 @@ module.exports = {
 
     const context = antiLinkOn ? "ativado" : "desativado";
 
-    await sendReply(`Recurso de anti-link ${context} com sucesso!`);
+    await sendReply(`Recurso de anti-link ${context} con éxito!`);
   },
 };
