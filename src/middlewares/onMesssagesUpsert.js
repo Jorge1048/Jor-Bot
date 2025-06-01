@@ -41,12 +41,15 @@ exports.onMessagesUpsert = async ({ socket, messages, groupCache }) => {
         groupCache,
         action,
       });
-    } else {
+   } else {
       const commonFunctions = loadCommonFunctions({ socket, webMessage });
 
       if (!commonFunctions) {
         continue;
       }
+
+      // ✅ Se pasa el socket como client al comando
+      commonFunctions.client = socket;
 
       await dynamicCommand(commonFunctions);
     }
