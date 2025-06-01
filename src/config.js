@@ -1,22 +1,25 @@
 const path = require("path");
 
-// Prefijo de los dos comandos. 
+// Prefixo dos comandos.
 exports.PREFIX = "/";
 
-// Emoji del bot (cámbialo si lo prefieres).
-exports.BOT_EMOJI = "🤖";
+// Emoji do bot (mude se preferir).
+exports.BOT_EMOJI = "👾";
 
-// Nombre del bot (cámbialo si lo prefieres).
-exports.BOT_NAME = "Satohaki-bot";
-
-
-exports.BOT_NUMBER = "558112345678";
+// Nome do bot (mude se preferir).
+exports.BOT_NAME = "Satohaki bot";
 
 // Número do bot. Coloque o número do bot
 // (apenas números, exatamente como está no WhatsApp).
-exports.OWNER_NUMBER = "573245451694";
+// Se o seu DDD não for de SP ou do Rio, não coloque o 9 antes do número.
+exports.BOT_NUMBER = "573019580756";
 
-// Diretorio de los comandos
+// Número do dono do bot. Coloque o número do dono do bot
+// (apenas números, exatamente como está no WhatsApp).
+// Se o seu DDD não for de SP ou do Rio, não coloque o 9 antes do número.
+exports.OWNER_NUMBER = "5521950502020";
+
+// Diretório dos comandos
 exports.COMMANDS_DIR = path.join(__dirname, "commands");
 
 // Diretório de arquivos de mídia.
@@ -35,7 +38,7 @@ exports.TIMEOUT_IN_MILLISECONDS_BY_EVENT = 700;
 exports.SPIDER_API_BASE_URL = "https://api.spiderx.com.br/api";
 
 // Obtenha seu token, criando uma conta em: https://api.spiderx.com.br.
-exports.SPIDER_API_TOKEN = "seu_token_aqui";
+exports.SPIDER_API_TOKEN = "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";
 
 // Caso queira responder apenas um grupo específico, coloque o ID dele aqui (ex: 120363023799506419@g.us).
 // Para saber o ID do grupo, use o comando <prefixo>getid
