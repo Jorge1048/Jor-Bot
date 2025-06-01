@@ -4,9 +4,9 @@ const { errorLog } = require(`${BASE_DIR}/utils/logger`);
 module.exports = {
   name: "abrir",
   description: "Abre o grupo.",
+  type: "admin",
   commands: [
-    "abrir",
-    "abri",
+    "abrir", "seguimos",
     "abre",
     "abrir-grupo",
     "abri-grupo",
@@ -22,13 +22,13 @@ module.exports = {
   handle: async ({ socket, remoteJid, sendSuccessReply, sendErrorReply }) => {
     try {
       await socket.groupSettingUpdate(remoteJid, "not_announcement");
-      await sendSuccessReply("Grupo aberto com sucesso!");
+      // await sendSuccessReply("Grupo abierto!");
     } catch (error) {
       await sendErrorReply(
-        "Para abrir o grupo, eu preciso ser administrador dele!"
+        "Solo los administradores pueden abrir el grupo!"
       );
       errorLog(
-        `Ocorreu um erro ao abrir o grupo! Causa: ${JSON.stringify(
+        `Hubo un error al abrir el grupo! Causa: ${JSON.stringify(
           error,
           null,
           2
