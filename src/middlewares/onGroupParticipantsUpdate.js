@@ -1,56 +1,132 @@
 /**
- * Evento llamado cuando un mensaje
- * se envía al grupo de WhatsApp *
+ * evento llamado cuando un miembro
+ * entra y sale de un grupo de WhatsApp.
+ *
  * @author Dev Gui
  */
+const { getProfileImageData } = require("../services/baileys");
+const fs = require("fs");
+const { onlyNumbers, randomDelay } = require("../utils");
 const {
-  isAtLeastMinutesInPast,
-  GROUP_PARTICIPANT_ADD,
-  GROUP_PARTICIPANT_LEAVE,
-  isAddOrLeave,
-} = require("../utils");
-const { dynamicCommand } = require("../utils/dynamicCommand");
-const { loadCommonFunctions } = require("../utils/loadCommonFunctions");
-const { onGroupParticipantsUpdate } = require("./onGroupParticipantsUpdate");
+  isActiveWelcomeGroup,
+  isActiveExitGroup,
+} = require("../utils/database");
 
-exports.onMessagesUpsert = async ({ socket, messages, groupCache }) => {
-  if (!messages.length) {
-    return;
-  }
+const { catBoxUpload } = require("../services/catbox");
+const {
+  spiderAPITokenConfigured,
+  exit,
+  welcome,
+} = require("../services/spider-x-api");
 
-  for (const webMessage of messages) {
-    const timestamp = webMessage.messageTimestamp;
-
-    if (isAtLeastMinutesInPast(timestamp)) {
-      continue;
+exports.onGroupParticipantsUpdate = async ({
+  userJid,
+  remoteJid,
+  socket,
+  groupCache,
+  action,
+}) => {
+  try {
+    if (!isActiveWelcomeGroup(remoteJid) || !isActiveExitGroup(remoteJid)) {
+      return;
     }
 
-    if (isAddOrLeave.includes(webMessage.messageStubType)) {
-      let action = "";
-      if (webMessage.messageStubType === GROUP_PARTICIPANT_ADD) {
-        action = "add";
-      } else if (webMessage.messageStubType === GROUP_PARTICIPANT_LEAVE) {
-        action = "remove";
-      }
+    await randomDelay();
 
-      onGroupParticipantsUpdate({
-        userJid: webMessage.messageStubParameters[0],
-        remoteJid: webMessage.key.remoteJid,
+    if (!remoteJid.endsWith("@g.us")) {
+      return;
+    }
+
+    if (action === "add") {
+      const { buffer, profileImage } = await getProfileImageData(
         socket,
-        groupCache,
-        action,
-      });
-   } else {
-      const commonFunctions = loadCommonFunctions({ socket, webMessage });
+        userJid
+      );
 
-      if (!commonFunctions) {
-        continue;
+      if (spiderAPITokenConfigured()) {
+        try {
+          const link = await catBoxUpload(buffer);
+
+          if (!link) {
+            throw new Error("Link inválido");
+          }
+
+          const url = welcome(
+            "Membro",
+            "Você é o mais novo membro do grupo!",
+            link
+          );
+
+          await socket.sendMessage(remoteJid, {
+            image: { url },
+            caption: `Seja bem vindo ao nosso grupo, @${onlyNumbers(userJid)}!`,
+            mentions: [userJid],
+          });
+        } catch (error) {
+          console.error("Erro ao fazer upload da imagem:", error);
+          await socket.sendMessage(remoteJid, {
+            image: buffer,
+            caption: `Seja bem vindo ao nosso grupo, @${onlyNumbers(userJid)}!`,
+            mentions: [userJid],
+          });
+        }
+      } else {
+        await socket.sendMessage(remoteJid, {
+          image: buffer,
+          caption: `Seja bem vindo ao nosso grupo, @${onlyNumbers(userJid)}!`,
+          mentions: [userJid],
+        });
       }
 
-      // ✅ Se pasa el socket como client al comando
-      commonFunctions.client = socket;
+      const metadata = await socket.groupMetadata(remoteJid);
+      groupCache.set(remoteJid, metadata);
 
-      await dynamicCommand(commonFunctions);
+      if (!profileImage.includes("default-user")) {
+        fs.unlinkSync(profileImage);
+      }
+    } else if (action === "remove") {
+      const { buffer, profileImage } = await getProfileImageData(
+        socket,
+        userJid
+      );
+
+      if (spiderAPITokenConfigured()) {
+        try {
+          const link = await catBoxUpload(buffer);
+
+          if (!link) {
+            throw new Error("Link inválido");
+          }
+
+          const url = exit("Adeus!", "Você foi um bom membro", link);
+
+          await socket.sendMessage(remoteJid, {
+            image: { url },
+            caption: `Tchau, @${onlyNumbers(userJid)}!`,
+            mentions: [userJid],
+          });
+        } catch (error) {
+          console.error("Erro ao fazer upload da imagem:", error);
+          await socket.sendMessage(remoteJid, {
+            image: buffer,
+            caption: `Tchau, @${onlyNumbers(userJid)}!`,
+            mentions: [userJid],
+          });
+        }
+      } else {
+        await socket.sendMessage(remoteJid, {
+          image: buffer,
+          caption: `Tchau, @${onlyNumbers(userJid)}!`,
+          mentions: [userJid],
+        });
+      }
+
+      if (!profileImage.includes("default-user")) {
+        fs.unlinkSync(profileImage);
+      }
     }
+  } catch (error) {
+    console.error("Erro ao processar evento onGroupParticipantsUpdate:", error);
+    process.exit(1);
   }
 };
