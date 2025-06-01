@@ -1,3 +1,4 @@
+/**
 const fs = require("node:fs");
 const { PREFIX } = require(`${BASE_DIR}/config`);
 const { InvalidParameterError } = require(`${BASE_DIR}/errors`);
@@ -9,10 +10,10 @@ module.exports = {
   description: "Faço upload da imagens",
   commands: ["to-link", "up", "upload", "gera-link", "gerar-link"],
   usage: `${PREFIX}gerar-link (marque a imagem) ou ${PREFIX}gerar-link (responda a imagem)`,
-  /**
+  
    * @param {CommandHandleProps} props
    * @returns {Promise<void>}
-   */
+   
   handle: async ({
     isImage,
     downloadImage,
@@ -44,3 +45,4 @@ module.exports = {
     fs.unlinkSync(filePath);
   },
 };
+*/
