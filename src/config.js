@@ -1,5 +1,4 @@
 const path = require("path");
-const path = require("path");
 
 // Prefijo de comando (Usa otro si lo prefieres)
 exports.PREFIX = "/";
