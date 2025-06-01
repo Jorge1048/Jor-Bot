@@ -44,19 +44,19 @@ exports.loadCommonFunctions = ({ socket, webMessage }) => {
     return await download(webMessage, fileName, "video", "mp4");
   };
 
-  const sendText = async (text, mentions) => {
-    let optionalParams = {};
+  const sendText = async (text, mentions, options = {}) => {
+  let optionalParams = {};
+  if (mentions?.length) {
+    optionalParams.mentions = mentions;
+  }
 
-    if (mentions?.length) {
-      optionalParams = { mentions };
-    }
-
-    return await socket.sendMessage(remoteJid, {
-      text: `${BOT_EMOJI} ${text}`,
-      ...optionalParams,
-    });
-  };
-
+  const prefix = options.noPrefix ? "" : `${BOT_EMOJI} `;
+  return await socket.sendMessage(remoteJid, {
+    text: `${prefix}${text}`,
+    ...optionalParams,
+  });
+};
+  
   const sendReply = async (text) => {
     return await socket.sendMessage(
       remoteJid,
@@ -97,17 +97,17 @@ exports.loadCommonFunctions = ({ socket, webMessage }) => {
 
   const sendWaitReply = async (text) => {
     await sendWaitReact();
-    return await sendReply(`⏳ Aguarde! ${text || waitMessage}`);
+    return await sendReply(`⏳ ${text || waitMessage}`);
   };
 
   const sendWarningReply = async (text) => {
     await sendWarningReact();
-    return await sendReply(`⚠️ Atenção! ${text}`);
+    return await sendReply(`⚠️ Atención! ${text}`);
   };
 
   const sendErrorReply = async (text) => {
     await sendErrorReact();
-    return await sendReply(`❌ Erro! ${text}`);
+    return await sendReply(`❌ Error! ${text}`);
   };
 
   const sendStickerFromFile = async (file, quoted = true) => {
@@ -608,3 +608,4 @@ exports.loadCommonFunctions = ({ socket, webMessage }) => {
     sendWarningReply,
   };
 };
+    
