@@ -15,7 +15,7 @@ exports.BOT_NAME = "Satohaki bot";
 exports.BOT_NUMBER = "573019580756";
 
 //clave para chatgpt 👇🏻
-OPENROUTER_API_KEY=sk-or-xxxxxxxxxxxxxxxxxxxxx
+exports.OPENROUTER_API_KEY = "Pon_tu_clave_aquí";
 
 // Número do dono do bot. Coloque o número do dono do bot
 // (apenas números, exatamente como está no WhatsApp).
