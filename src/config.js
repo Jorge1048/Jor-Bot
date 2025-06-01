@@ -14,6 +14,9 @@ exports.BOT_NAME = "Satohaki bot";
 // Se o seu DDD não for de SP ou do Rio, não coloque o 9 antes do número.
 exports.BOT_NUMBER = "573019580756";
 
+//clave para chatgpt 👇🏻
+OPENROUTER_API_KEY=sk-or-xxxxxxxxxxxxxxxxxxxxx
+
 // Número do dono do bot. Coloque o número do dono do bot
 // (apenas números, exatamente como está no WhatsApp).
 // Se o seu DDD não for de SP ou do Rio, não coloque o 9 antes do número.
