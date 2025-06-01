@@ -1,3 +1,4 @@
+/**
 const { imageAI } = require(`${BASE_DIR}/services/spider-x-api`);
 
 const { PREFIX } = require(`${BASE_DIR}/config`);
@@ -16,10 +17,10 @@ module.exports = {
     "stable-difusion",
   ],
   usage: `${PREFIX}stable-diffusion-turbo descrição`,
-  /**
+  
    * @param {CommandHandleProps} props
    * @returns {Promise<void>}
-   */
+   
   handle: async ({
     args,
     sendWaitReply,
@@ -48,3 +49,4 @@ module.exports = {
     await sendImageFromURL(data.image);
   },
 };
+*/
