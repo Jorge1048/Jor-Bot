@@ -47,7 +47,7 @@ exports.dynamicCommand = async (paramsHandler) => {
       await socket.groupParticipantsUpdate(remoteJid, [userJid], "remove");
 
       await sendReply(
-        "Anti-link ativado! Você foi removido por enviar um link!"
+        "¡Antienlace activado! ¡Te han eliminado por enviar un enlace!"
       );
 
       await socket.sendMessage(remoteJid, {
@@ -82,13 +82,13 @@ exports.dynamicCommand = async (paramsHandler) => {
   }
 
   if (!(await checkPermission({ type, ...paramsHandler }))) {
-    await sendErrorReply("Você não tem permissão para executar este comando!");
+    await sendErrorReply("¡No tienes permiso para ejecutar este comando!");
     return;
   }
 
   if (!isActiveGroup(remoteJid) && command.name !== "on") {
     await sendWarningReply(
-      "Este grupo está desativado! Peça para o dono do grupo ativar o bot!"
+      "¡Este grupo está deshabilitado! ¡Pídele al propietario que habilite el bot!"
     );
 
     return;
@@ -101,17 +101,17 @@ exports.dynamicCommand = async (paramsHandler) => {
     });
   } catch (error) {
     if (error instanceof InvalidParameterError) {
-      await sendWarningReply(`Parâmetros inválidos! ${error.message}`);
+      await sendWarningReply(`Parámetros inválidos! ${error.message}`);
     } else if (error instanceof WarningError) {
       await sendWarningReply(error.message);
     } else if (error instanceof DangerError) {
       await sendErrorReply(error.message);
     } else {
-      errorLog("Erro ao executar comando", error);
+      errorLog("Error al ejecutar el comando", error);
       await sendErrorReply(
-        `Ocorreu um erro ao executar o comando ${command.name}! O desenvolvedor foi notificado!
+        `Se produjo un error al ejecutar el comando ${command.name}! ¡El desarrollador ha sido notificado!
       
-📄 *Detalhes*: ${error.message}`
+📄 *Detalles*: ${error.message}`
       );
     }
   }
