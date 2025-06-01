@@ -1,6 +1,5 @@
 const axios = require("axios");
-
-const OPENROUTER_API_KEY = "Tu_clave_API_quí";
+const { OPENROUTER_API_KEY } = require("../config");
 
 async function askOpenRouter(prompt) {
   if (!prompt) throw new Error("Prompt não fornecido!");
