@@ -22,12 +22,12 @@ module.exports = {
     isGroup,
   }) => {
     if (!isGroup) {
-      throw new WarningError("Esse comando só pode ser usado em grupos.");
+      throw new WarningError("Este comandos solo puede ser usado en grupos.");
     }
 
     if (!fullArgs) {
       throw new InvalidParameterError(
-        "Você precisa fornecer um novo nome para o grupo!"
+        "Debes proporcionar un nuevo nombre para el grupo!"
       );
     }
 
@@ -36,12 +36,12 @@ module.exports = {
 
     if (fullArgs.length < minLength || fullArgs.length > maxLength) {
       throw new InvalidParameterError(
-        `O nome do grupo deve ter entre ${minLength} e ${maxLength} caracteres!`
+        `El nombre del grupo debe tener entre  ${minLength} y ${maxLength} carácteres!`
       );
     }
 
     try {
-      await sendWaitReply("Alterando o nome do grupo...");
+      await sendWaitReply("Cambiando el nombre del grupo...");
 
       const groupMetadata = await socket.groupMetadata(remoteJid);
       const oldName = groupMetadata.subject;
@@ -49,12 +49,12 @@ module.exports = {
       await socket.groupUpdateSubject(remoteJid, fullArgs);
 
       await sendSuccessReply(
-        `Nome do grupo alterado com sucesso!\n\n*Antigo*: ${oldName}\n\n*Novo*: ${fullArgs}`
+        `El nombre del grupo fué cambiado con éxito!\n\n*Antiguo*: ${oldName}\n\n*Nuevo*: ${fullArgs}`
       );
     } catch (error) {
-      errorLog("Error ao alterar o nome do grupo:", error);
+      errorLog("Error al cambiar el nombre del grupo:", error);
       await sendErrorReply(
-        "Falha ao alterar o nome do grupo. Verifique se tenho permissão de administrador."
+        "No se pudo cambiar el nombre del grupo. Vrifique si tiene el permiso del administrador."
       );
     }
   },
