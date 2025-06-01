@@ -1,3 +1,4 @@
+/**
 const { imageAI } = require(`${BASE_DIR}/services/spider-x-api`);
 
 const { PREFIX } = require(`${BASE_DIR}/config`);
@@ -7,10 +8,10 @@ module.exports = {
   description: "Cria uma imagem usando a IA Pixart",
   commands: ["pixart"],
   usage: `${PREFIX}pixart descrição`,
-  /**
+  
    * @param {CommandHandleProps} props
    * @returns {Promise<void>}
-   */
+  
   handle: async ({
     args,
     sendWaitReply,
@@ -39,3 +40,4 @@ module.exports = {
     await sendImageFromURL(data.image);
   },
 };
+*/
