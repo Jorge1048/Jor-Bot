@@ -6,6 +6,7 @@ const { WarningError } = require(`${BASE_DIR}/errors`);
 module.exports = {
   name: "set-name",
   description: "Altera o nome do grupo e salva o nome antigo",
+  type: "admin",
   commands: ["set-name", "set-group-name", "mudar-nome-grupo", "nome-grupo"],
   usage: `${PREFIX}set-name novo nome do grupo`,
   /**
