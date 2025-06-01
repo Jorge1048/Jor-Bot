@@ -1,6 +1,5 @@
 const axios = require("axios");
 
-// 🚨 Pon aquí tu clave real de OpenRouter:
 const OPENROUTER_API_KEY = "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";
 
 async function askOpenRouter(prompt) {
