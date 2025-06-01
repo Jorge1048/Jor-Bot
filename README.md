@@ -47,7 +47,13 @@ cd takeshi-bot
 chmod -R 755 ./*
 ```
 
-7 - Ejecuta el bot.
+7 - instala axios para IA
+
+```sh
+npm install axios
+```
+
+8 - Ejecuta el bot.
 
 ```sh
 npm start
@@ -58,12 +64,18 @@ Ej: Si tú número es +57 XXX XXXXXXXX lo ingresas así: 57XXXXXXXXXXX
 
 9 - Ingresa el código que aparece en Termux en tu WhatsApp. 
 
-10 - Espera 10 segundos y luego presiona CTRL + C para detener el bot.
+10 - Espera 10 segundos y luego presiona `CTRL + c` para detener el bot.
 
 11 - Para iniciar otra vez Ejecuta el bot.
 
 ```sh
 npm start
 ```
+ 
+12 - En el administrador de tú dispositivo configura el archivo config.js que está dentro de la carpeta src para que lo personalices (Opcional)
 
-11 - En el administrador de tú dispositivo configura el archivo config.js que está dentro de la carpeta src para que lo personalices. 
+En caso de que desvincules el bot de WhatsApp presiona `CTRL + c` y ejecuta:
+
+```sh
+rm -rf ./assets/auth/baileys && npm start
+```
