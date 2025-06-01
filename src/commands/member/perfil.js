@@ -1,3 +1,4 @@
+/**
 const { isGroup } = require(`${BASE_DIR}/utils`);
 const { errorLog } = require(`${BASE_DIR}/utils/logger`);
 
@@ -13,7 +14,7 @@ module.exports = {
   /**
    * @param {CommandHandleProps} props
    * @returns {Promise<void>}
-   */
+   
   handle: async ({
     args,
     socket,
@@ -95,3 +96,5 @@ module.exports = {
     }
   },
 };
+
+*/
