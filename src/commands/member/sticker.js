@@ -27,7 +27,7 @@ module.exports = {
   }) => {
     if (!isImage && !isVideo) {
       throw new InvalidParameterError(
-        "Você precisa marcar uma imagem/gif/vídeo ou responder a uma imagem/gif/vídeo"
+        "necesitas marcar una imagen o un video"
       );
     }
 
@@ -70,9 +70,9 @@ module.exports = {
       if (!haveSecondsRule) {
         fs.unlinkSync(inputPath);
 
-        await sendErrorReply(`O vídeo que você enviou tem mais de ${sizeInSeconds} segundos!
+        await sendErrorReply(`El video que enviaste dura mas de ${sizeInSeconds} segundos!
 
-Envie um vídeo menor!`);
+Envia un video de duración menor!`);
 
         return;
       }
