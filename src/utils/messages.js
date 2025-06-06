@@ -44,7 +44,7 @@ exports.menuMessage = () => {
 
 ╭  ┄ 𝅄 ۪꒰ \`⡞᪲=͟͟͞𝙈𝙞𝙚𝙢𝙗𝙧𝙤𝙨≼\`᳞ׄ ꒱ ۟ 𝅄 ┄
 ┊
-┊  • ${PREFIX}stiker
+┊  • ${PREFIX}sticker
 ┊
 ╰⸼ ┄  ─  ꒰  ׅ୭ 👒 ୧ ׅ ꒱  ┄  ┄ ⸼`;
 };
