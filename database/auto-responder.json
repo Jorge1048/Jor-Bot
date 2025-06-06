@@ -12,7 +12,7 @@
         "answer": "*COMANDOS OCULTOS:*\n\n - /instalarbot"
     },
     {
-        "match": "1",
+        "match": "/1",
         "answer": "Así no! de esta forma:\n\n/auto-responder 1\n> Para activar el auto-responder\n/auto-responder 0\n> Para desactivar el auto-responder\n\n/anti-link 1\n> Para activar el anti-link\n/anti-link 0\n> Para desactivar el anti-link"
     },
     {
