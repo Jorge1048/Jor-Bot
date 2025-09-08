@@ -7,7 +7,7 @@ exports.PREFIX = "/";
 exports.BOT_EMOJI = "👾";
 
 // Nombre del bot
-exports.BOT_NAME = "Satohaki bot";
+exports.BOT_NAME = "Jor bot";
 
 // Número de bot. Introduzca el número del bot
 // (solo números, tal como está en WhatsApp).
