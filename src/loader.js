@@ -1,15 +1,11 @@
 /**
- * Este script es responsable
- * de cargar los eventos
- * que serán escuchados por
- * el socket de WhatsApp.
- *
+ * Carga los eventos para el socket de WhatsApp
+ * Optimizado para velocidad en grupos grandes
  * @author Dev Gui
  */
-const { TIMEOUT_IN_MILLISECONDS_BY_EVENT } = require("./config");
-const { onMessagesUpsert } = require("./middlewares/onMesssagesUpsert");
 const path = require("path");
-const { errorLog } = require("./utils/logger");
+const { errorLog, infoLog } = require("./utils/logger");
+const { onMessagesUpsert } = require("./middlewares/onMesssagesUpsert");
 
 exports.load = (socket, groupCache) => {
   global.BASE_DIR = path.resolve(__dirname);
@@ -18,30 +14,31 @@ exports.load = (socket, groupCache) => {
     try {
       await callback(data);
     } catch (error) {
-      errorLog(`Erro ao processar evento ${eventName}: ${error.message}`);
+      errorLog(`Error al procesar evento ${eventName}: ${error.message}`);
     }
   };
 
+  // 🔹 Messages.upsert sin timeout innecesario
   socket.ev.on("messages.upsert", async (data) => {
-    setTimeout(() => {
-      safeEventHandler(
-        () =>
-          onMessagesUpsert({
-            socket,
-            messages: data.messages,
-            groupCache,
-          }),
-        data,
-        "messages.upsert"
-      );
-    }, TIMEOUT_IN_MILLISECONDS_BY_EVENT);
+    safeEventHandler(
+      () =>
+        onMessagesUpsert({
+          socket,
+          messages: data.messages,
+          groupCache,
+        }),
+      data,
+      "messages.upsert"
+    );
   });
 
   process.on("uncaughtException", (error) => {
-    errorLog(`Erro não capturado: ${error.message}`);
+    errorLog(`Excepción no capturada: ${error.message}`);
   });
 
   process.on("unhandledRejection", (reason) => {
-    errorLog(`Promessa rejeitada não tratada: ${reason}`);
+    errorLog(`Promesa rechazada no tratada: ${reason}`);
   });
+
+  infoLog("Eventos cargados correctamente");
 };
