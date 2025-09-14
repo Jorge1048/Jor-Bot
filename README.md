@@ -20,7 +20,6 @@ Abre Termux y ejecuta los siguientes comandos.<br/>
 pkg upgrade -y && pkg update -y && pkg install git -y && pkg install nodejs-lts -y && pkg install ffmpeg -y
 ```
 
-
 ```sh
 termux-setup-storage
 ```
@@ -34,7 +33,7 @@ chmod -R 755 ./*
 ```
 
 ```sh
-yarn install
+yarn install --frozen-lockfile
 ```
 
 ```sh
