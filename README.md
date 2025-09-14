@@ -26,9 +26,7 @@ termux-setup-storage
 ```
 
 ```sh
-cd /sdcard
-git clone https://github.com/Jorge1048/Satohaki-bot.git
-cd Satohaki-bot
+cd /sdcard && git clone https://github.com/Jorge1048/Satohaki-bot.git && cd Satohaki-bot
 ```
 
 ```sh
