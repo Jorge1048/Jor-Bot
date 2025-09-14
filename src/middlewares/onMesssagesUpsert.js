@@ -1,11 +1,8 @@
 /**
- * Evento chamado quando uma mensagem
- * é enviada para o grupo do WhatsApp
- *
- * @author Dev Gui
+ * Evento llamado cuando se recibe un mensaje en WhatsApp
+ * Optimizado para velocidad y sin errores de variables no definidas
  */
 const {
-  isAtLeastMinutesInPast,
   GROUP_PARTICIPANT_ADD,
   GROUP_PARTICIPANT_LEAVE,
   isAddOrLeave,
@@ -15,40 +12,31 @@ const { loadCommonFunctions } = require("../utils/loadCommonFunctions");
 const { onGroupParticipantsUpdate } = require("./onGroupParticipantsUpdate");
 
 exports.onMessagesUpsert = async ({ socket, messages, groupCache }) => {
-  if (!messages.length) {
-    return;
-  }
+  if (!messages.length) return;
 
   for (const webMessage of messages) {
     const timestamp = webMessage.messageTimestamp;
 
-    if (isAtLeastMinutesInPast(timestamp)) {
-      continue;
-    }
+    // 🔹 Omitimos el filtrado por antigüedad para velocidad
+    // if (isAtLeastMinutesInPast(timestamp)) continue;
 
     if (isAddOrLeave.includes(webMessage.messageStubType)) {
       let action = "";
-      if (webMessage.messageStubType === GROUP_PARTICIPANT_ADD) {
-        action = "add";
-      } else if (webMessage.messageStubType === GROUP_PARTICIPANT_LEAVE) {
-        action = "remove";
-      }
+      if (webMessage.messageStubType === GROUP_PARTICIPANT_ADD) action = "add";
+      else if (webMessage.messageStubType === GROUP_PARTICIPANT_LEAVE) action = "remove";
 
-      onGroupParticipantsUpdate({
+      await onGroupParticipantsUpdate({
         userJid: webMessage.messageStubParameters[0],
         remoteJid: webMessage.key.remoteJid,
         socket,
         groupCache,
         action,
       });
-   } else {
+    } else {
       const commonFunctions = loadCommonFunctions({ socket, webMessage });
+      if (!commonFunctions) continue;
 
-      if (!commonFunctions) {
-        continue;
-      }
-
-      // ✅ Se pasa el socket como client al comando
+      // Pasamos el socket como client
       commonFunctions.client = socket;
 
       await dynamicCommand(commonFunctions);
