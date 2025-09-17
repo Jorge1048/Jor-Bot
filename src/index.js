@@ -108,7 +108,7 @@ async function start() {
     process.setMaxListeners(1500);
 
     bannerLog();
-    infoLog("Iniciando meus componentes internos...");
+    infoLog("Iniciando componentes internos...");
 
     const groupCache = new NodeCache({ stdTTL: 5 * 60, useClones: false });
     const socket = await connect(groupCache);
