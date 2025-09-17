@@ -100,7 +100,7 @@ rm -rf ./assets/auth/baileys && npm start
 ### Opciones Avanzadas (Opcional)
 
 <details>
- <summary><b> onstrucciones para activar IA</b></summary>
+ <summary><b> instrucciones para activar IA</b></summary>
 
 1. Ve a este enlace:
 🔗 https://openrouter.ai/keys
@@ -126,7 +126,7 @@ Instala MT Manager desde la play store, entra al app y busca la carpeta `satohak
 </details>
 
 <details>
-<summary><b> onstrucciones de personalización</b></summary>
+<summary><b> instrucciones de personalización</b></summary>
 
 Desde el administrador de archivos de tu dispositivo, abre la carpeta *jor-bot*, luego entra a *src* y abre el archivo *config.js* para personalizar la configuración del bot.
 
