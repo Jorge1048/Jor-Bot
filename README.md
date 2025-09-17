@@ -9,7 +9,7 @@
 ### **`❕️ Información importante`**
 
 <details>
- <summary><b>➤ Sobre este bot</b></summary>
+ <summary><b> Sobre este bot</b></summary>
 
 Jor-Bot: tu asistente todo en uno para WhatsApp, con gestión de grupos, chat inteligente y automatización rápida y segura. Ideal para quienes buscan un bot sencillo, sin demasiados comandos ni notificaciones molestas.
 
@@ -22,7 +22,7 @@ Jor-Bot: tu asistente todo en uno para WhatsApp, con gestión de grupos, chat in
 </details>
 
 <details>
- <summary><b>➤ Funciones</b></summary>
+ <summary><b> Funciones</b></summary>
 
 - [x] Abrir y cerrar el grupo de WhatsApp con comandos 
 - [x] Anti-link y autoresponder 
