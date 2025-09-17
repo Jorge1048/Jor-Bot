@@ -10,6 +10,7 @@ Jor-Bot: tu asistente todo en uno para WhatsApp, con gestión de grupos, chat in
 </p>
 </div>
 
+
 ### **`Información importante`**
 
 <details>
@@ -34,16 +35,20 @@ Jor-Bot: tu asistente todo en uno para WhatsApp, con gestión de grupos, chat in
 
 </details>
 
+
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+
 
 _¿No tienes Termux? [Haz clic aquí y descarga la última versión](https://www.mediafire.com/file/082otphidepx7aq/Termux_0.119.1_aldebaran_dev.apk)._
 
----
 
 
-## Instalación en Termux
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
-Abre Termux y ejecuta los siguientes comandos.<br/>
+
+### Instalación en Termux
+
+Abre Termux y ejecuta los siguientes comandos uno por uno:<br/>
 
 ```sh
 pkg upgrade -y && pkg update -y && pkg install git -y && pkg install nodejs-lts -y && pkg install ffmpeg -y
@@ -82,20 +87,20 @@ Para iniciar otra vez Ejecuta el bot.
 npm start
 ```
  
-En el administrador de tú dispositivo configura el archivo config.js que está dentro de la carpeta src para que lo personalices (Opcional)
-
 En caso de que desvincules el bot de WhatsApp presiona `CTRL + c` y ejecuta:
 
 ```sh
 rm -rf ./assets/auth/baileys && npm start
 ```
 
----
 
-### Instructiones para activar la IA (Opcional):
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+
+
+### Opciones Avanzadas (Opcional)
 
 <details>
- <summary><b> Click aquí para ver instrucciones</b></summary>
+ <summary><b> onstrucciones para activar IA</b></summary>
 
 1. Ve a este enlace:
 🔗 https://openrouter.ai/keys
@@ -119,3 +124,14 @@ No sabes donde encontrar la configuración?
 Instala MT Manager desde la play store, entra al app y busca la carpeta `satohaki-bot` → `src` → `config.js`
 
 <details>
+
+<details>
+ <summary><b> onstrucciones de personalización</b></summary>
+
+Desde el administrador de archivos de tu dispositivo, abre la carpeta *jor-bot*, luego entra a *src* y abre el archivo *config.js* para personalizar la configuración del bot.
+
+> Se recomienda usar MT Manager para editar config.js, ya que otras apps podrían bloquear la personalización.
+
+[Descarga MT Manager](https://play.google.com/store/apps/details?id=com.nextapp.manager)
+
+<details> 
