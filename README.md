@@ -120,9 +120,7 @@ rm -rf ./assets/auth/baileys && npm start
 7. Copia tu clave y pégala en el archivo de configuración de tu bot:
 `exports.OPENROUTER_API_KEY = "Pon_clave_aquí";`
 
-No sabes donde encontrar la configuración? 
-
-Instala MT Manager desde la play store, entra al app y busca la carpeta `satohaki-bot` → `src` → `config.js`
+Para encontrar y editar la configuración de tú bot instala MT Manager [Descargar MT Manager](https://play.google.com/store/apps/details?id=com.nextapp.manager), entra al app y busca la carpeta `satohaki-bot` → `src` → `config.js`
 
 
 </details>
@@ -130,11 +128,10 @@ Instala MT Manager desde la play store, entra al app y busca la carpeta `satohak
 <details>
 <summary><b> Instrucciones de personalización</b></summary>
 
-Instala MT Manager desde la play store, entra al app y busca la carpeta `satohaki-bot` → `src` → `config.js`
+Instala MT Manager [Descargar MT Manager](https://play.google.com/store/apps/details?id=com.nextapp.manager), entra al app y busca la carpeta `satohaki-bot` → `src` → `config.js`
 para personalizar el bot
 
 > Se recomienda usar MT Manager para editar config.js, ya que otras apps podrían bloquear la personalización.
 
-[Descarga MT Manager](https://play.google.com/store/apps/details?id=com.nextapp.manager)
 
 </details> 
