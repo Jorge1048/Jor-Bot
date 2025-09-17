@@ -1,12 +1,6 @@
 <h1 align="center">=͟͟͞ 𝙅𝙤𝙧 𝘽𝙤𝙩 🦅</h1>
 
-<img src="./assets/images/jor.png">
-</p>
-</div>
-
-
-
-### **`❕️ Información importante`**
+### **`❕️ Información`**
 
 <details>
  <summary><b> Sobre este bot</b></summary>
@@ -33,6 +27,11 @@ Jor-Bot: tu asistente todo en uno para WhatsApp, con gestión de grupos, chat in
 </details>
 
 ---
+
+
+<img src="./assets/images/jor.png">
+</p>
+</div>
 
 
 _¿No tienes Termux? [Haz clic aquí y descarga la última versión](https://www.mediafire.com/file/082otphidepx7aq/Termux_0.119.1_aldebaran_dev.apk)._
