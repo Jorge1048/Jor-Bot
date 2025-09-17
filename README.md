@@ -130,7 +130,8 @@ Instala MT Manager desde la play store, entra al app y busca la carpeta `satohak
 <details>
 <summary><b> Instrucciones de personalización</b></summary>
 
-Desde el administrador de archivos de tu dispositivo, abre la carpeta *jor-bot*, luego entra a *src* y abre el archivo *config.js* para personalizar la configuración del bot.
+Instala MT Manager desde la play store, entra al app y busca la carpeta `satohaki-bot` → `src` → `config.js`
+para personalizar el bot
 
 > Se recomienda usar MT Manager para editar config.js, ya que otras apps podrían bloquear la personalización.
 
