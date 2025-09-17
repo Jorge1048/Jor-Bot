@@ -54,23 +54,18 @@ Abre Termux y ejecuta los siguientes comandos uno por uno:<br/>
 ```sh
 pkg upgrade -y && pkg update -y && pkg install git -y && pkg install nodejs-lts -y && pkg install ffmpeg -y
 ```
-
 ```sh
 termux-setup-storage
 ```
-
 ```sh
 cd /sdcard && git clone https://github.com/Jorge1048/Satohaki-bot.git && cd Satohaki-bot
 ```
-
 ```sh
 chmod -R 755 ./*
 ```
-
 ```sh
 yarn install --frozen-lockfile
 ```
-
 ```sh
 npm start
 ```
@@ -80,7 +75,10 @@ Ej: Si tú número es +57 XXX XXXXXXXX lo ingresas así: 57XXXXXXXXXXX
 
 Ingresa el código que aparece en Termux en tu WhatsApp. 
 
-Espera 10 segundos y luego presiona `CTRL + c` para detener el bot.
+
+## Otros pasos a considerar 
+
+Presiona `CTRL + c` para detener el bot.
 
 Para iniciar otra vez Ejecuta el bot.
 
@@ -92,6 +90,15 @@ En caso de que desvincules el bot de WhatsApp presiona `CTRL + c` y ejecuta:
 
 ```sh
 rm -rf ./assets/auth/baileys && npm start
+```
+
+Si cerraste la "session" en Termux o borraste los datos de esta app, en vez de hacer todo fe nuevo puedes ejecutar:
+
+```sh
+cd /storage/emulated/0/Satohaki-bot/
+```
+```sh
+npm start
 ```
 
 
