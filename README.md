@@ -54,6 +54,8 @@ Abre Termux y ejecuta los siguientes comandos uno por uno:<br/>
 ```sh
 pkg upgrade -y && pkg update -y && pkg install git -y && pkg install nodejs-lts -y && pkg install ffmpeg -y
 ```
+> Si aparece (Y/I/N/O/D/Z) [default=N] ? use la letra `y` + `ENTER` para continuar con la instalación
+
 ```sh
 termux-setup-storage
 ```
