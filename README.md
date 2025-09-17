@@ -34,8 +34,7 @@ Jor-Bot: tu asistente todo en uno para WhatsApp, con gestión de grupos, chat in
 
 </details>
 
-
----
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
 _¿No tienes Termux? [Haz clic aquí y descarga la última versión](https://www.mediafire.com/file/082otphidepx7aq/Termux_0.119.1_aldebaran_dev.apk)._
 
