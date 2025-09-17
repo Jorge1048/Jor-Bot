@@ -141,7 +141,7 @@ async function connect(groupCache) {
             warningLog(chalk.hex('#DAA520')("Conexión prohibida!"));
             break;
           case DisconnectReason.restartRequired:
-            infoLog('Para reiniciarne digite "npm start".');
+            infoLog('Para reiniciar el bot digite "npm start".');
             break;
           case DisconnectReason.unavailableService:
             warningLog("Servicio indisponible!");
