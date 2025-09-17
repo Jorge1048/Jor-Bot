@@ -1,16 +1,8 @@
 /** ✓
- * Script de
- * inicialização do bot.
+ * Script de inicialización del bot.
  *
- * Este script é
- * responsável por
- * iniciar a conexão
- * com o WhatsApp.
- *
- * Não é recomendado alterar
- * este arquivo,
- * a menos que você saiba
- * o que está fazendo.
+ * Este script es responsable por iniciar la conexión con WhatsApp.
+ * No se recomienda modificar este archivo, a menos que sepas lo que haces.
  *
  * @author Dev Gui
  */
@@ -39,14 +31,22 @@ const {
 const NodeCache = require("node-cache");
 const { TEMP_DIR } = require("./config");
 
+// Logger
 const logger = pino(
   { timestamp: () => `,"time":"${new Date().toJSON()}"` },
   pino.destination(path.join(TEMP_DIR, "wa-logs.txt"))
 );
-
 logger.level = "error";
 
+// Cache globales
 const msgRetryCounterCache = new NodeCache();
+const processedMsgCache = new NodeCache({ stdTTL: 30, checkperiod: 30 }); // cache de mensajes procesados
+
+// Limpiar cache automáticamente cada 30s
+setInterval(() => {
+  processedMsgCache.flushAll();
+  // infoLog("Cache de mensajes procesados limpiada automáticamente."); // descomenta si quieres log
+}, 1000 * 30);
 
 async function connect(groupCache) {
   const baileysFolder = path.resolve(
@@ -58,7 +58,6 @@ async function connect(groupCache) {
   );
 
   const { state, saveCreds } = await useMultiFileAuthState(baileysFolder);
-
   const { version } = await fetchLatestBaileysVersion();
 
   const socket = makeWASocket({
@@ -81,26 +80,37 @@ async function connect(groupCache) {
     cachedGroupMetadata: (jid) => groupCache.get(jid),
   });
 
+  // Preguntar número si no hay credenciales
   if (!socket.authState.creds.registered) {
     warningLog("Credenciales aún no configuradas!");
-
     infoLog('Ingresa el número de teléfono del bot (ejemplo: "573245451694"):');
 
     const phoneNumber = await question("Ingresa el número de teléfono del bot: ");
-
     if (!phoneNumber) {
       errorLog(
         '¡Número de teléfono inválido! Intenta de nuevo con el comando "npm start".'
       );
-
       process.exit(1);
     }
 
     const code = await socket.requestPairingCode(onlyNumbers(phoneNumber));
-
     sayLog(`Código de emparejamiento: ${code}`);
   }
 
+  // Listener de mensajes
+  socket.ev.on("messages.upsert", async ({ messages, type }) => {
+    if (type !== "notify") return;
+
+    const msg = messages[0];
+    if (!msg.message) return;
+
+    if (processedMsgCache.get(msg.key.id)) return; // ya procesado
+    processedMsgCache.set(msg.key.id, true); // marcar como procesado
+
+    await load(socket, groupCache, msg);
+  });
+
+  // Listener de conexión
   socket.ev.on("connection.update", async (update) => {
     const { connection, lastDisconnect } = update;
 
@@ -130,13 +140,14 @@ async function connect(groupCache) {
             warningLog("Conexión prohibida!");
             break;
           case DisconnectReason.restartRequired:
-            infoLog('Me reinicie por favor! Digite "npm start".');
+            infoLog('Para reiniciarne digite "npm start".');
             break;
           case DisconnectReason.unavailableService:
-            warningLog("Serviço indisponível!");
+            warningLog("Servicio indisponible!");
             break;
         }
 
+        // Reconectar sin duplicar listeners
         const newSocket = await connect(groupCache);
         load(newSocket, groupCache);
       }
