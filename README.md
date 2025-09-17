@@ -76,7 +76,8 @@ Ej: Si tú número es +57 XXX XXXXXXXX lo ingresas así: 57XXXXXXXXXXX
 Ingresa el código que aparece en Termux en tu WhatsApp. 
 
 
-## Otros pasos a considerar 
+<details>
+ <summary><b>Otros pasos a considerar</b></summary> 
 
 Presiona `CTRL + c` para detener el bot.
 
@@ -92,7 +93,7 @@ En caso de que desvincules el bot de WhatsApp presiona `CTRL + c` y ejecuta:
 rm -rf ./assets/auth/baileys && npm start
 ```
 
-Si cerraste la "session" en Termux o borraste los datos de esta app, en vez de hacer todo fe nuevo puedes ejecutar:
+Si cerraste la "session" en Termux o borraste los datos de esta app, en vez de hacer todo de nuevo puedes ejecutar:
 
 ```sh
 cd /storage/emulated/0/Satohaki-bot/
@@ -100,6 +101,7 @@ cd /storage/emulated/0/Satohaki-bot/
 ```sh
 npm start
 ```
+</details>
 
 
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
