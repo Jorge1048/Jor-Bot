@@ -93,7 +93,7 @@ rm -rf ./assets/auth/baileys && npm start
 
 ---
 
-### Instructiones para activar la IA:
+### Instructiones para activar la IA (Opcional):
 
 <details>
  <summary><b> Click aquí para ver instrucciones</b></summary>
