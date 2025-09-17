@@ -30,6 +30,7 @@ const {
 } = require("./utils/logger");
 const NodeCache = require("node-cache");
 const { TEMP_DIR } = require("./config");
+const chalk = require("chalk"); // ⚡ Importamos chalk para colores
 
 // Logger
 const logger = pino(
@@ -125,19 +126,19 @@ async function connect(groupCache) {
             warningLog("Sesión inválida!");
             break;
           case DisconnectReason.connectionClosed:
-            warningLog("Conexión cerrada!");
+            warningLog(chalk.hex('#DAA520').italic("Conexión cerrada!"));
             break;
           case DisconnectReason.connectionLost:
-            warningLog("Conexión perdida!");
+            warningLog(chalk.hex('#DAA520')("Conexión perdida!"));
             break;
           case DisconnectReason.connectionReplaced:
-            warningLog("Conexión sustituida!");
+            warningLog(chalk.hex('#DAA520')("Conexión sustituida!"));
             break;
           case DisconnectReason.multideviceMismatch:
-            warningLog("Dispositivo incompatible!");
+            warningLog(chalk.hex('#DAA520')("Dispositivo incompatible!"));
             break;
           case DisconnectReason.forbidden:
-            warningLog("Conexión prohibida!");
+            warningLog(chalk.hex('#DAA520')("Conexión prohibida!"));
             break;
           case DisconnectReason.restartRequired:
             infoLog('Para reiniciarne digite "npm start".');
@@ -152,9 +153,9 @@ async function connect(groupCache) {
         load(newSocket, groupCache);
       }
     } else if (connection === "open") {
-      successLog("Fuí conectando con éxito!");
+      successLog(chalk.hex('#006400').italic("Conectando con éxito!"));
     } else {
-      infoLog("Actualizando conexión...");
+      infoLog(chalk.hex('#708090').italic("Actualizando conexión..."));
     }
   });
 
