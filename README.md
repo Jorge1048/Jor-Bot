@@ -91,9 +91,14 @@ En caso de que desvincules el bot de WhatsApp presiona `CTRL + c` y ejecuta:
 rm -rf ./assets/auth/baileys && npm start
 ```
 
+---
+
 ### Instructiones para activar la IA:
 
-Ve a este enlace:
+<details>
+ <summary><b> Click aquí para ver instrucciones</b></summary>
+
+1. Ve a este enlace:
 🔗 https://openrouter.ai/keys
 
 2. Si no tienes cuenta, regístrate (puedes usar tu cuenta de Google, Discord, etc.).
@@ -114,3 +119,4 @@ No sabes donde encontrar la configuración?
 
 Instala MT Manager desde la play store, entra al app y busca la carpeta `satohaki-bot` → `src` → `config.js`
 
+<details>
