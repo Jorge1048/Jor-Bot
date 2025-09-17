@@ -22,6 +22,7 @@ Jor-Bot: tu asistente todo en uno para WhatsApp, con gestión de grupos, chat in
 
 > Este proyecto está basado en Takeshi Bot, desarrollado por Guilherme França (Dev Gui). Distribuido bajo la licencia GNU GPL v3. Este repositorio contiene modificaciones realizadas por Jorge1048.
 
+
 </details>
 
 <details>
@@ -100,7 +101,7 @@ rm -rf ./assets/auth/baileys && npm start
 ### Opciones Avanzadas (Opcional)
 
 <details>
- <summary><b> instrucciones para activar IA</b></summary>
+ <summary><b> Instrucciones para activar IA</b></summary>
 
 1. Ve a este enlace:
 🔗 https://openrouter.ai/keys
@@ -123,10 +124,11 @@ No sabes donde encontrar la configuración?
 
 Instala MT Manager desde la play store, entra al app y busca la carpeta `satohaki-bot` → `src` → `config.js`
 
+
 </details>
 
 <details>
-<summary><b> instrucciones de personalización</b></summary>
+<summary><b> Instrucciones de personalización</b></summary>
 
 Desde el administrador de archivos de tu dispositivo, abre la carpeta *jor-bot*, luego entra a *src* y abre el archivo *config.js* para personalizar la configuración del bot.
 
