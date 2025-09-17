@@ -58,7 +58,7 @@ pkg upgrade -y && pkg update -y && pkg install git -y && pkg install nodejs-lts 
 termux-setup-storage
 ```
 ```sh
-cd /sdcard && git clone https://github.com/Jorge1048/Satohaki-bot.git && cd Satohaki-bot
+cd /storage/emulated/0 && git clone https://github.com/Jorge1048/Satohaki-bot.git && cd Satohaki-bot
 ```
 ```sh
 chmod -R 755 ./*
