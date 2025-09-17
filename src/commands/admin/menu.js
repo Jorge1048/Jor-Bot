@@ -19,7 +19,7 @@ module.exports = {
 
     // Envía la imagen junto con el texto del menú
     await sendImageFromFile(
-      path.join(ASSETS_DIR, "images", "satohaki.png"),
+      path.join(ASSETS_DIR, "images", "jor.png"),
       `\n\n${menuMessage()}`
     );
 
