@@ -79,6 +79,7 @@ Ingresa el código que aparece en Termux en tu WhatsApp.
 <details>
  <summary><b>Otros pasos a considerar</b></summary> 
 
+
 Presiona `CTRL + c` para detener el bot.
 
 Para iniciar otra vez Ejecuta:
@@ -112,6 +113,7 @@ npm start
 <details>
  <summary><b> Instrucciones para activar IA</b></summary>
 
+
 1. Ve a este enlace:
 🔗 https://openrouter.ai/keys
 
@@ -136,6 +138,7 @@ Para encontrar y editar la configuración de tú bot instala MT Manager [Descarg
 
 <details>
 <summary><b> Instrucciones de personalización</b></summary>
+
 
 Instala MT Manager [Descargar MT Manager](https://www.mediafire.com/file/ba63tlfoahx78dc/MT+Manager_2.16.5.apk/file), entra al app y busca la carpeta `satohaki-bot` → `src` → `config.js`
 para personalizar el bot
