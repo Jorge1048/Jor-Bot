@@ -6,15 +6,33 @@
 
 
 
-> **Este proyecto está basado en [Takeshi Bot](https://github.com/guiireal/takeshi-bot), desarrollado por [Guilherme França (Dev Gui)](https://github.com/guiireal).**  
-> **Distribuido bajo la licencia [GNU GPL v3](https://www.gnu.org/licenses/gpl-3.0.html).**  
-> **Este repositorio contiene modificaciones realizadas por Jorge1048.**
+### **`❕️ Información importante`**
 
-## Sobre este proyecto
+<details>
+ <summary><b>➤ Sobre este bot</b></summary>
 
-Este proyecto no tiene ninguna vinculación oficial con WhatsApp. Fue desarrollado de forma independiente para interacciones automatizadas mediante la plataforma.
+Jor-Bot: tu asistente todo en uno para WhatsApp, con gestión de grupos, chat inteligente y automatización rápida y segura. Ideal para quienes buscan un bot sencillo, sin demasiados comandos ni notificaciones molestas.
 
-No nos hacemos responsables por el uso indebido de este bot. Es responsabilidad exclusiva del usuario asegurarse de que su uso cumpla con los términos de servicio de WhatsApp y la legislación vigente.
+> Este proyecto no tiene ninguna vinculación oficial con WhatsApp. Fue desarrollado de forma independiente para interacciones automatizadas mediante la plataforma.
+
+> No nos hacemos responsables por el uso indebido de este bot. Es responsabilidad exclusiva del usuario asegurarse de que su uso cumpla con los términos de servicio de WhatsApp y la legislación vigente.
+
+> Este proyecto está basado en Takeshi Bot, desarrollado por Guilherme França (Dev Gui). Distribuido bajo la licencia GNU GPL v3. Este repositorio contiene modificaciones realizadas por Jorge1048.
+
+</details>
+
+<details>
+ <summary><b>➤ Funciones</b></summary>
+
+- [x] Abrir y cerrar el grupo de WhatsApp con comandos 
+- [x] Anti-link y autoresponder 
+- [x] Etiquetar a cada uno con etiquetas visibles y no visibles 
+- [x] IA 
+- [x] Hacer stickers 
+
+</details>
+
+---
 
 
 _¿No tienes Termux? [Haz clic aquí y descarga la última versión](https://www.mediafire.com/file/082otphidepx7aq/Termux_0.119.1_aldebaran_dev.apk)._
