@@ -80,7 +80,7 @@ Ingresa el código que aparece en Termux en tu WhatsApp.
 
 Presiona `CTRL + c` para detener el bot.
 
-Para iniciar otra vez Ejecuta el bot.
+Para iniciar otra vez Ejecuta:
 
 ```sh
 npm start
