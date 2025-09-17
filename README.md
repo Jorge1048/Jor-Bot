@@ -123,7 +123,7 @@ No sabes donde encontrar la configuración?
 
 Instala MT Manager desde la play store, entra al app y busca la carpeta `satohaki-bot` → `src` → `config.js`
 
-<details>
+</details>
 
 <details>
 <summary><b> onstrucciones de personalización</b></summary>
@@ -134,4 +134,4 @@ Desde el administrador de archivos de tu dispositivo, abre la carpeta *jor-bot*,
 
 [Descarga MT Manager](https://play.google.com/store/apps/details?id=com.nextapp.manager)
 
-<details> 
+</details> 
