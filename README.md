@@ -122,12 +122,11 @@ rm -rf ./assets/auth/baileys && npm start
 No sabes donde encontrar la configuración? 
 
 Instala MT Manager desde la play store, entra al app y busca la carpeta `satohaki-bot` → `src` → `config.js`
-<details>
-
 
 <details>
- <summary><b> onstrucciones de personalización</b>
- </summary>
+
+<details>
+<summary><b> onstrucciones de personalización</b></summary>
 
 Desde el administrador de archivos de tu dispositivo, abre la carpeta *jor-bot*, luego entra a *src* y abre el archivo *config.js* para personalizar la configuración del bot.
 
