@@ -1,5 +1,5 @@
 {
-  "name": "satohaki-bot",
+  "name": "jor-bot",
   "version": "4.0.0",
   "description": "Um bot de WhatsApp multifunções.",
   "main": "./src/index.js",
