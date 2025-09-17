@@ -8,6 +8,7 @@ const path = require("path");
 const { errorLog, infoLog } = require("./utils/logger");
 const { onMessagesUpsert } = require("./middlewares/onMesssagesUpsert");
 const NodeCache = require("node-cache");
+const chalk = require("chalk"); // ⚡ Importamos chalk para colores
 
 // Cache para mensajes procesados
 const processedMsgCache = new NodeCache({ stdTTL: 30, checkperiod: 10 }); // TTL 30s, check cada 10s
@@ -57,7 +58,7 @@ exports.load = (socket, groupCache) => {
   // Limpiar cache de mensajes cada 30 segundos
   setInterval(() => {
     processedMsgCache.flushAll();
-    infoLog("Cache de mensajes procesados limpiada automáticamente.");
+    infoLog(chalk.hex('#708090').italic("Cache de mensajes limpiada."));
   }, 30 * 1000);
 
   process.on("uncaughtException", (error) => {
@@ -68,5 +69,5 @@ exports.load = (socket, groupCache) => {
     errorLog(`Promesa rechazada no tratada: ${reason}`);
   });
 
-  infoLog("Eventos cargados correctamente");
+infoLog(chalk.hex('#708090').italic("Eventos cargados correctamente."));
 };
