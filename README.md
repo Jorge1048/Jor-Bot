@@ -1,3 +1,11 @@
+<h1 align="center">=͟͟͞ 𝙅𝙤𝙧 𝘽𝙤𝙩 🦅</h1>
+
+<img src="./assets/images/jor.png">
+</p>
+</div>
+
+
+
 > **Este proyecto está basado en [Takeshi Bot](https://github.com/guiireal/takeshi-bot), desarrollado por [Guilherme França (Dev Gui)](https://github.com/guiireal).**  
 > **Distribuido bajo la licencia [GNU GPL v3](https://www.gnu.org/licenses/gpl-3.0.html).**  
 > **Este repositorio contiene modificaciones realizadas por Jorge1048.**
