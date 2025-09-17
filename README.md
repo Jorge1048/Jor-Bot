@@ -1,11 +1,21 @@
 <h1 align="center">=͟͟͞ 𝙅𝙤𝙧 𝘽𝙤𝙩 🦅</h1>
 
-### **`❕️ Información`**
+Jor-Bot: tu asistente todo en uno para WhatsApp, con gestión de grupos, chat inteligente y automatización rápida y segura. Ideal para quienes buscan un bot sencillo, sin demasiados comandos ni notificaciones molestas.
+
+<div align="center"> 
+  <a href="https://git.io/typing-svg"> 
+    <img src="https://readme-typing-svg.demolab.com?font=Ribeye&size=50&pause=1000&color=33ff00&center=true&width=910&height=100&lines=Jor-Bot;+Bot+Para+Whatsapp; Multi+Uso" alt="Typing SVG" />
+  </a> 
+</div>
+
+<img src="./assets/images/jor.png">
+</p>
+</div>
+
+### **`Información importante`**
 
 <details>
  <summary><b> Sobre este bot</b></summary>
-
-Jor-Bot: tu asistente todo en uno para WhatsApp, con gestión de grupos, chat inteligente y automatización rápida y segura. Ideal para quienes buscan un bot sencillo, sin demasiados comandos ni notificaciones molestas.
 
 > Este proyecto no tiene ninguna vinculación oficial con WhatsApp. Fue desarrollado de forma independiente para interacciones automatizadas mediante la plataforma.
 
