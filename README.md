@@ -71,7 +71,7 @@ npm start
 ```
 
 Ingresa el número de teléfono y presiona enter.
-Ej: Si tú número es +57 XXX XXXXXXXX lo ingresas así: 57XXXXXXXXXXX
+Ej: Si tú número es +57 300 6000233 lo ingresas así: 573006000233
 
 Ingresa el código que aparece en Termux en tu WhatsApp. 
 
