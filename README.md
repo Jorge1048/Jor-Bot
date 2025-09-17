@@ -66,7 +66,7 @@ cd /storage/emulated/0 && git clone https://github.com/Jorge1048/jor-bot.git && 
 chmod -R 755 ./*
 ```
 ```sh
-pkg yarn install --frozen-lockfile
+pkg install yarn 
 ```
 ```sh
 npm start
